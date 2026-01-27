@@ -8,124 +8,143 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">ProService<span class="text-secondary-brand">.</span></a>
+            <a class="navbar-brand" href="index.html">ProService<span class="text-primary-brand">.</span></a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
                 <div class="offcanvas-header border-bottom">
                     <h5 class="offcanvas-title fw-bold">ProService</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    <button type="button" class="btn-close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Pages</a>
-                            <ul class="dropdown-menu border-0 shadow-sm">
-                                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
-                                <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
-                                <li><a class="dropdown-item active" href="pricing.html">Pricing</a></li>
-                                <li><a class="dropdown-item" href="404.html">404 Error</a></li>
-                                <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu border-0 shadow-lg p-3 rounded-4 mt-2">
+                                <li><a class="dropdown-item rounded-3 py-2" href="home-2.html">Home 2</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2" href="pricing.html">Pricing</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2" href="contact.html">Contact</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center gap-3">
-                        <button class="btn btn-link nav-link p-0" id="theme-toggle"><i
+                    <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                        <button class="btn btn-link nav-link p-2" id="theme-toggle"><i
                                 class="bi bi-moon-fill fs-5"></i></button>
-                        <a href="login.html" class="btn btn-outline-primary btn-sm px-3 rounded-pill">Login</a>
-                        <a href="register.html" class="btn btn-primary-custom btn-sm px-3 rounded-pill">Sign Up</a>
+                        <div class="vr mx-2 d-none d-lg-block"></div>
+                        <a href="login.html" class="fw-bold text-decoration-none text-muted small me-3">Login</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm px-4">Sign Up</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="bg-light py-5 mt-5">
-        <div class="container pt-5">
-            <div class="row align-items-center text-center">
-                <div class="col-lg-8 mx-auto">
-                    <h1 class="fw-bold mb-2">Our Pricing</h1>
-                    <p class="text-muted lead">Simple, transparent pricing for everyone.</p>
+    <!-- Header -->
+    <header class="section-padding bg-light position-relative overflow-hidden">
+        <div class="hero-bg-blob" style="left: -300px; bottom: -200px; opacity: 0.3;"></div>
+        <div class="container position-relative z-index-1 text-center">
+            <h1 class="display-4 fw-bold mb-3">Simple <span class="text-gradient">Pricing</span></h1>
+            <p class="lead text-muted col-lg-8 mx-auto mb-4">Choose the plan that fits your business needs.</p>
+
+            <div class="d-flex justify-content-center align-items-center mt-5">
+                <span class="fw-bold me-3">Monthly</span>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                        style="width: 3.5rem; height: 1.75rem;">
                 </div>
+                <span class="fw-bold ms-3 text-muted">Yearly <span
+                        class="badge bg-success bg-opacity-10 text-success rounded-pill small ms-1">-20%</span></span>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
+    <!-- Pricing Tables -->
+    <section class="section-padding bg-white">
         <div class="container">
-            <div class="row g-4 align-items-center">
+            <div class="row g-4 align-items-center justify-content-center">
                 <!-- Basic -->
-                <div class="col-lg-4">
-                    <div class="card border-0 shadow-sm p-4 h-100">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-hover border-0 p-4 h-100">
                         <div class="card-body text-center">
-                            <h5 class="fw-bold text-muted text-uppercase mb-4">Basic</h5>
-                            <h2 class="display-4 fw-bold text-primary-brand mb-0">$29<span
-                                    class="fs-6 text-muted fw-normal">/mo</span></h2>
-                            <p class="text-muted mb-4">For individuals and small teams.</p>
-                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5 text-start mx-auto"
-                                style="max-width: 250px;">
-                                <li><i class="bi bi-check-lg text-success me-2"></i> 5 Users</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Basic Analytics</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> 24/7 Support</li>
-                                <li class="text-muted"><i class="bi bi-x-lg me-2"></i> Advanced Reports</li>
+                            <h5 class="fw-bold text-muted mb-4">Starter</h5>
+                            <h2 class="display-4 fw-bold mb-4">$29<span class="fs-6 text-muted fw-normal">/mo</span>
+                            </h2>
+                            <p class="text-muted mb-5">Perfect for small teams getting started.</p>
+                            <a href="register.html"
+                                class="btn btn-outline-secondary w-100 mb-4 fw-bold rounded-pill">Get Started</a>
+                            <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> 5 Projects
+                                </li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Basic
+                                    Analytics</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> 24/7 Support
+                                </li>
                             </ul>
-                            <a href="#" class="btn btn-outline-primary w-100 fw-bold">Get Started</a>
                         </div>
                     </div>
                 </div>
-                <!-- Pro -->
-                <div class="col-lg-4">
-                    <div class="card border-primary border-2 shadow p-4 h-100 relative">
-                        <div class="position-absolute top-0 start-50 translate-middle">
-                            <span class="badge bg-primary-brand px-3 py-2 rounded-pill">Most Popular</span>
-                        </div>
-                        <div class="card-body text-center mt-3">
-                            <h5 class="fw-bold text-primary-brand text-uppercase mb-4">Professional</h5>
-                            <h2 class="display-4 fw-bold text-primary-brand mb-0">$59<span
-                                    class="fs-6 text-muted fw-normal">/mo</span></h2>
-                            <p class="text-muted mb-4">For growing businesses.</p>
-                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5 text-start mx-auto"
-                                style="max-width: 250px;">
-                                <li><i class="bi bi-check-lg text-success me-2"></i> 20 Users</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Advanced Analytics</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Priority Support</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> API Access</li>
+
+                <!-- Pro (Highlight) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-primary border-2 shadow-lg p-4 h-100 position-relative overflow-hidden">
+                        <div
+                            class="position-absolute top-0 start-50 translate-middle-x bg-primary-brand text-white px-3 py-1 rounded-bottom fw-bold small">
+                            POPULAR</div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-primary-brand mb-4 mt-2">Professional</h5>
+                            <h2 class="display-4 fw-bold mb-4">$59<span class="fs-6 text-muted fw-normal">/mo</span>
+                            </h2>
+                            <p class="text-muted mb-5">Everything you need to scale your business.</p>
+                            <a href="register.html"
+                                class="btn btn-primary-custom w-100 mb-4 fw-bold rounded-pill shadow-md">Get Started</a>
+                            <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Unlimited
+                                    Projects</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Advanced
+                                    Analytics</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Priority
+                                    Support</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Custom Domain
+                                </li>
                             </ul>
-                            <a href="#" class="btn btn-primary-custom w-100 fw-bold">Get Started</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Enterprise -->
-                <div class="col-lg-4">
-                    <div class="card border-0 shadow-sm p-4 h-100">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-hover border-0 p-4 h-100">
                         <div class="card-body text-center">
-                            <h5 class="fw-bold text-muted text-uppercase mb-4">Enterprise</h5>
-                            <h2 class="display-4 fw-bold text-primary-brand mb-0">$99<span
-                                    class="fs-6 text-muted fw-normal">/mo</span></h2>
-                            <p class="text-muted mb-4">For large organizations.</p>
-                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5 text-start mx-auto"
-                                style="max-width: 250px;">
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Unlimited Users</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Analysis Features</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Dedicated Manager</li>
-                                <li><i class="bi bi-check-lg text-success me-2"></i> Custom Integrations</li>
+                            <h5 class="fw-bold text-muted mb-4">Enterprise</h5>
+                            <h2 class="display-4 fw-bold mb-4">$99<span class="fs-6 text-muted fw-normal">/mo</span>
+                            </h2>
+                            <p class="text-muted mb-5">Advanced security and control for large teams.</p>
+                            <a href="contact.html"
+                                class="btn btn-outline-secondary w-100 mb-4 fw-bold rounded-pill">Contact Sales</a>
+                            <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> SSO
+                                    Integration</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Dedicated
+                                    Manager</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> SLA Agreement
+                                </li>
                             </ul>
-                            <a href="#" class="btn btn-outline-primary w-100 fw-bold">Contact Sales</a>
                         </div>
                     </div>
                 </div>
@@ -133,9 +152,12 @@
         </div>
     </section>
 
-    <footer class="footer pt-5">
-        <div class="container text-center py-4">
-            <p class="text-muted small">&copy; 2026 ProService.</p>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3 bg-white border-top">
+        <div class="container">
+            <div class="text-center">
+                <p class="text-muted small">&copy; 2026 ProService Inc.</p>
+            </div>
         </div>
     </footer>
 

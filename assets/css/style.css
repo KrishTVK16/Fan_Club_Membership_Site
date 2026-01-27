@@ -1,5 +1,5 @@
 /* 
- * Premium Multipurpose Service Theme
+ * Premium Multipurpose Service Theme - Grayic Style Overhaul
  * Author: Antigravity
  * License: Private
  */
@@ -7,43 +7,72 @@
 /* =========================================
    1. Design System & Variables
    ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 :root {
-    /* Brand Colors - Premium Corporate Palette */
-    --primary-color: #0B2447;    /* Deep Royal Blue - Authority & Trust */
-    --secondary-color: #19376D;  /* Rich Blue - Secondary Actions */
-    --accent-color: #576CBC;     /* Soft Blue - Highlights */
-    --action-color: #A5D7E8;     /* Cyan/Ice - CTAs (Tertiary) */
-    
+    /* Brand Colors - Modern SaaS Palette 
+       Deep Blue/Indigo base with vibrant accents 
+    */
+    --primary-color: #4F46E5;
+    /* Indigo 600 - Dynamic Action */
+    --secondary-color: #4338CA;
+    /* Indigo 700 - Hover State */
+    --accent-color: #8B5CF6;
+    /* Violet 500 - Gradients/Accents */
+    --tertiary-color: #F8FAFC;
+    /* Slate 50 - Background */
+    --success-color: #10B981;
+    /* Emerald 500 */
+    --warning-color: #F59E0B;
+    /* Amber 500 */
+
     /* Functional Colors */
-    --body-bg: #FFFFFF;
+    --body-bg: #F8FAFC;
+    /* Light Slate Background */
     --card-bg: #FFFFFF;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
+    --text-main: #1E293B;
+    /* Slate 800 */
+    --text-muted: #64748B;
+    /* Slate 500 */
+    --border-color: #E2E8F0;
+    /* Slate 200 */
 
-    /* Typography */
+    /* Typography - Clean & Editorial */
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-heading: 'Outfit', sans-serif;
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Unified font family for cleaner look */
 
-    /* Spacing & Radii */
+    /* Modern SaaS Tokens */
     --border-radius-sm: 0.5rem;
     --border-radius-lg: 1rem;
-    --section-padding: 5rem 0;
+    --border-radius-xl: 1.5rem;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+
+    --section-padding: 6rem 0;
 }
 
 /* Dark Mode Variables */
 [data-bs-theme="dark"] {
-    --body-bg: #0f172a;
-    --card-bg: #1e293b;
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
+    --body-bg: #0F172A;
+    /* Slate 900 */
+    --card-bg: #1E293B;
+    /* Slate 800 */
+    --text-main: #F1F5F9;
+    /* Slate 100 */
+    --text-muted: #94A3B8;
+    /* Slate 400 */
     --border-color: #334155;
-    
-    /* Adjust Brand Colors for Dark Mode visibility if necessary */
-    --primary-color: #A5D7E8; /* Light blue text on dark bg often works better for headings? Or keep brand colors and use bg layers. */
-    /* Let's keep primary color as the brand identity, but maybe ensure contrast. 
-       Actually, for 'primary-color' used in background buttons, it's fine. 
-       For text, we usually switch to light. */
+    /* Slate 700 */
+
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 /* =========================================
@@ -54,13 +83,21 @@ body {
     color: var(--text-main);
     background-color: var(--body-bg);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-main);
+    letter-spacing: -0.025em;
+    /* Tighter heading tracking */
     margin-bottom: 1rem;
 }
 
@@ -72,100 +109,180 @@ a {
 /* =========================================
    3. Utility Classes
    ========================================= */
-.text-primary-brand { color: var(--primary-color) !important; }
-.bg-primary-brand { background-color: var(--primary-color) !important; color: white; }
-.text-secondary-brand { color: var(--secondary-color) !important; }
-.bg-secondary-brand { background-color: var(--secondary-color) !important; color: white; }
+.text-primary-brand {
+    color: var(--primary-color) !important;
+}
 
-.section-padding { padding: var(--section-padding); }
+.bg-primary-brand {
+    background-color: var(--primary-color) !important;
+    color: white;
+}
 
+.text-secondary-brand {
+    color: var(--accent-color) !important;
+}
+
+/* Gradients */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-brand {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+.section-padding {
+    padding: var(--section-padding);
+}
+
+/* Glassmorphism Card */
 .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border-color);
     background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.shadow-soft {
+    box-shadow: var(--shadow-lg);
 }
 
 /* =========================================
-   4. Header & Navigation
+   4. Header & Navigation (Floating Glass)
    ========================================= */
 .navbar {
-    background-color: var(--body-bg); /* or transparent then solid on scroll */
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    padding: 1.5rem 0;
     transition: all 0.3s ease;
-    padding: 1rem 0;
 }
 
 .navbar.scrolled {
-    background-color: var(--body-bg); /* Ensure contrast */
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-sm);
 }
 
 .navbar-brand {
-    font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    letter-spacing: -0.05em;
+    color: var(--text-main);
 }
 
 .nav-link {
     font-weight: 500;
-    color: var(--text-main);
+    font-size: 0.95rem;
+    color: var(--text-muted);
     padding: 0.5rem 1rem !important;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--secondary-color);
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
 }
 
 /* =========================================
-   5. Hero Section
+   5. Hero Section (Modern)
    ========================================= */
 .hero-section {
-    padding: 8rem 0 5rem; /* account for fixed header */
+    padding: 10rem 0 6rem;
+    /* More top padding for floating header */
     position: relative;
     overflow: hidden;
 }
 
+/* Background blob decoration */
+.hero-bg-blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -200px;
+    right: -100px;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+[data-bs-theme="dark"] .hero-bg-blob {
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+
 .hero-title {
-    font-size: 3.5rem;
-    line-height: 1.2;
+    font-size: 3.75rem;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
 }
 
 /* =========================================
    6. Components
    ========================================= */
+/* Buttons */
+.btn {
+    border-radius: 2rem;
+    /* Pill shape standard */
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
 .btn-primary-custom {
     background-color: var(--primary-color);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    border-radius: var(--border-radius-sm);
     color: white;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
 }
+
 .btn-primary-custom:hover {
     background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
     color: white;
 }
 
+.btn-outline-secondary {
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--body-bg);
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+/* Icon Box */
 .icon-box {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background-color: rgba(87, 108, 188, 0.1); /* light accent */
+    border-radius: 1rem;
+    /* Soft square */
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(139, 92, 246, 0.1));
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -173,60 +290,83 @@ a {
 
 /* Footer */
 .footer {
-    padding: 4rem 0 2rem;
+    padding: 5rem 0 3rem;
     background-color: var(--card-bg);
     border-top: 1px solid var(--border-color);
 }
+
 .footer h5 {
-    color: var(--primary-color);
+    color: var(--text-main);
+    font-size: 1rem;
     margin-bottom: 1.5rem;
 }
+
 .footer-link {
     display: block;
     margin-bottom: 0.8rem;
     color: var(--text-muted);
+    font-size: 0.95rem;
 }
+
 .footer-link:hover {
-    color: var(--secondary-color);
-    padding-left: 5px; /* micro interaction */
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
 /* Dashboard Sidebar */
 #sidebar-wrapper {
     min-height: 100vh;
-    margin-left: -15rem;
+    margin-left: -16rem;
     transition: margin 0.25s ease-out;
     background-color: var(--card-bg);
     border-right: 1px solid var(--border-color);
+    width: 16rem;
 }
+
 #sidebar-wrapper .sidebar-heading {
     padding: 1.5rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-color);
 }
+
 #sidebar-wrapper .list-group-item {
     border: none;
     background: transparent;
-    color: var(--text-main);
-    padding: 1rem 1.5rem;
+    color: var(--text-muted);
+    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
 }
+
 #sidebar-wrapper .list-group-item:hover,
 #sidebar-wrapper .list-group-item.active {
-    background-color: rgba(87, 108, 188, 0.1);
+    background-color: rgba(79, 70, 229, 0.1);
     color: var(--primary-color);
-    font-weight: 600;
 }
 
 @media (min-width: 768px) {
     #sidebar-wrapper {
         margin-left: 0;
     }
-    #page-content-wrapper {
-        min-width: 0;
-        width: 100%;
-    }
+
     body.sb-sidenav-toggled #sidebar-wrapper {
-        margin-left: -15rem;
+        margin-left: -16rem;
     }
 }
