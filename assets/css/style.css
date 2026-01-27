@@ -1,0 +1,232 @@
+/* 
+ * Premium Multipurpose Service Theme
+ * Author: Antigravity
+ * License: Private
+ */
+
+/* =========================================
+   1. Design System & Variables
+   ========================================= */
+:root {
+    /* Brand Colors - Premium Corporate Palette */
+    --primary-color: #0B2447;    /* Deep Royal Blue - Authority & Trust */
+    --secondary-color: #19376D;  /* Rich Blue - Secondary Actions */
+    --accent-color: #576CBC;     /* Soft Blue - Highlights */
+    --action-color: #A5D7E8;     /* Cyan/Ice - CTAs (Tertiary) */
+    
+    /* Functional Colors */
+    --body-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+
+    /* Typography */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+
+    /* Spacing & Radii */
+    --border-radius-sm: 0.5rem;
+    --border-radius-lg: 1rem;
+    --section-padding: 5rem 0;
+}
+
+/* Dark Mode Variables */
+[data-bs-theme="dark"] {
+    --body-bg: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    
+    /* Adjust Brand Colors for Dark Mode visibility if necessary */
+    --primary-color: #A5D7E8; /* Light blue text on dark bg often works better for headings? Or keep brand colors and use bg layers. */
+    /* Let's keep primary color as the brand identity, but maybe ensure contrast. 
+       Actually, for 'primary-color' used in background buttons, it's fine. 
+       For text, we usually switch to light. */
+}
+
+/* =========================================
+   2. Global Resets & Typography
+   ========================================= */
+body {
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background-color: var(--body-bg);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* =========================================
+   3. Utility Classes
+   ========================================= */
+.text-primary-brand { color: var(--primary-color) !important; }
+.bg-primary-brand { background-color: var(--primary-color) !important; color: white; }
+.text-secondary-brand { color: var(--secondary-color) !important; }
+.bg-secondary-brand { background-color: var(--secondary-color) !important; color: white; }
+
+.section-padding { padding: var(--section-padding); }
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   4. Header & Navigation
+   ========================================= */
+.navbar {
+    background-color: var(--body-bg); /* or transparent then solid on scroll */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar.scrolled {
+    background-color: var(--body-bg); /* Ensure contrast */
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-main);
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-color);
+}
+
+/* =========================================
+   5. Hero Section
+   ========================================= */
+.hero-section {
+    padding: 8rem 0 5rem; /* account for fixed header */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   6. Components
+   ========================================= */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-sm);
+    color: white;
+}
+.btn-primary-custom:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(87, 108, 188, 0.1); /* light accent */
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    padding: 4rem 0 2rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+.footer h5 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+.footer-link {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+}
+.footer-link:hover {
+    color: var(--secondary-color);
+    padding-left: 5px; /* micro interaction */
+}
+
+/* Dashboard Sidebar */
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+#sidebar-wrapper .list-group-item {
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    padding: 1rem 1.5rem;
+}
+#sidebar-wrapper .list-group-item:hover,
+#sidebar-wrapper .list-group-item.active {
+    background-color: rgba(87, 108, 188, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    body.sb-sidenav-toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}

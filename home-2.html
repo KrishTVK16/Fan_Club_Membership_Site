@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Home | ProService</title>
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ProService<span class="text-secondary-brand">.</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title fw-bold">ProService</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item active" href="home-2.html">Home 2</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
+                                <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                                <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                                <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-link nav-link p-0" id="theme-toggle"><i
+                                class="bi bi-moon-fill fs-5"></i></button>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm px-3 rounded-pill">Login</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm px-3 rounded-pill">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Marketing Hero -->
+    <header class="hero-section text-center d-flex align-items-center"
+        style="min-height: 80vh; background: linear-gradient(180deg, rgba(239, 246, 255, 0.5) 0%, rgba(255,255,255,1) 100%);">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title fw-bold mb-4 display-4">Grow Your Audience With Data-Driven Strategies</h1>
+                    <p class="lead text-muted mb-5 px-lg-5">
+                        Unlock the potential of your brand with our comprehensive marketing suite. We turn numbers into
+                        actionable insights.
+                    </p>
+                    <div class="card p-2 border-0 shadow-lg d-inline-block mw-100" style="width: 500px">
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control border-0 bg-light"
+                                placeholder="Enter your business email">
+                            <button type="submit" class="btn btn-primary-custom px-4">Start Now</button>
+                        </form>
+                    </div>
+                    <p class="small text-muted mt-3"><i class="bi bi-check2-circle text-success"></i> No credit card
+                        required &nbsp; <i class="bi bi-check2-circle text-success"></i> 14-day free trial</p>
+                </div>
+            </div>
+            <div class="mt-5">
+                <img src="https://placehold.co/1000x500/f8fafc/cbd5e1?text=Dashboard+Preview" alt="Dashboard"
+                    class="img-fluid rounded-4 shadow-lg border">
+            </div>
+        </div>
+    </header>
+
+    <!-- Brand Grid -->
+    <section class="py-5 border-bottom">
+        <div class="container">
+            <div
+                class="row row-cols-2 row-cols-md-5 g-4 opacity-50 justify-content-center align-items-center text-center">
+                <div class="col">
+                    <h5 class="fw-bold text-muted">Google</h5>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold text-muted">Amazon</h5>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold text-muted">Spotify</h5>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold text-muted">Slack</h5>
+                </div>
+                <div class="col">
+                    <h5 class="fw-bold text-muted">Netflix</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/600x600/e2e8f0/64748b?text=Analytics" alt="Feature"
+                        class="img-fluid rounded-4">
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <span class="text-primary-brand fw-bold text-uppercase small ls-1">Smart Analytics</span>
+                    <h2 class="fw-bold mb-4 mt-2">Real-time data at your fingertips</h2>
+                    <p class="text-muted mb-4">Stop guessing. Get clear visualization of your performance metrics across
+                        all channels in one single dashboard.</p>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li class="d-flex gap-3">
+                            <i class="bi bi-check-circle-fill text-primary-brand fs-5"></i>
+                            <div>
+                                <h6 class="fw-bold mb-0">Live Tracking</h6>
+                                <small class="text-muted">Monitor changes as they happen.</small>
+                            </div>
+                        </li>
+                        <li class="d-flex gap-3">
+                            <i class="bi bi-check-circle-fill text-primary-brand fs-5"></i>
+                            <div>
+                                <h6 class="fw-bold mb-0">Custom Reports</h6>
+                                <small class="text-muted">Generate PDF reports in seconds.</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-md-4">
+                    <a href="index.html" class="fw-bold fs-3 text-primary-brand text-decoration-none">ProService<span
+                            class="text-secondary-brand">.</span></a>
+                    <p class="text-muted mt-3">Empowering businesses with next-gen solutions.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5>Product</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Subscribe</h5>
+                    <form><input class="form-control" placeholder="Email"></form>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top text-muted small">&copy; 2026 ProService.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
