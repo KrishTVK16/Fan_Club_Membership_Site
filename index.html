@@ -2,10 +2,11 @@
 <html lang="en" dir="ltr" data-bs-theme="light">
 
 <head>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium multipurpose service business template">
-    <title>ProService | Modern Business Solutions</title>
+    <meta name="description" content="Official Fan Club & Membership Community">
+    <title>The Fan Club | Exclusive Perks & Community</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,70 +28,64 @@
 
     <!-- ================= Navbar (Floating) ================= -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container-header-footer">
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                ProService<span class="text-primary-brand">.</span>
+                <img src="assets/images/logo.svg" alt="Logo" width="180" height="60">
             </a>
 
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Header Actions -->
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Theme Toggle (Always Visible) -->
+                <button class="btn btn-link nav-link p-2" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="bi bi-moon-fill fs-5"></i>
+                </button>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">ProService</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav mx-auto">
+                <div class="offcanvas-body d-lg-flex align-items-center justify-content-between text-center">
+                    <!-- Close Button (Mobile Only) -->
+                    <button type="button" class="btn-close ms-auto d-block d-lg-none mb-3" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 w-100">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home-2.html">Home 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Perks</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Pages
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow-lg p-3 rounded-4 mt-2">
-                                <li><a class="dropdown-item rounded-3 py-2" href="home-2.html">Home 2</a></li>
-                                <li><a class="dropdown-item rounded-3 py-2" href="service-details.html">Service
-                                        Details</a></li>
-                                <li><a class="dropdown-item rounded-3 py-2" href="pricing.html">Pricing</a></li>
-                                <li><a class="dropdown-item rounded-3 py-2" href="404.html">404 Error</a></li>
-                                <li><a class="dropdown-item rounded-3 py-2" href="coming-soon.html">Coming Soon</a></li>
-                            </ul>
+                            <a class="nav-link" href="pricing.html">Plans</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
 
-                    <!-- Right Side Actions -->
-                    <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
-                        <!-- Theme Toggle -->
-                        <button class="btn btn-link nav-link p-2" id="theme-toggle" aria-label="Toggle theme">
-                            <i class="bi bi-moon-fill fs-5"></i>
-                        </button>
-
-                        <div class="vr mx-2 d-none d-lg-block"></div>
-
-                        <!-- Auth Buttons -->
-                        <a href="login.html" class="fw-bold text-decoration-none text-muted small me-3">Login</a>
-                        <a href="register.html" class="btn btn-primary-custom btn-sm px-4">Sign Up</a>
+                    <!-- Action Buttons -->
+                    <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-4 mt-lg-0">
+                        <div class="vr-separator d-none d-lg-block"></div>
+                        <a href="dashboard.html" class="btn btn-outline-secondary btn-sm px-3 w-lg-auto">Dashboard</a>
+                        <a href="login.html" class="btn btn-outline-secondary btn-sm px-3 w-lg-auto">Login</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm px-4 w-lg-auto">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -106,20 +101,20 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <span
-                        class="badge bg-primary-brand bg-opacity-10 text-primary-brand mb-4 px-3 py-2 rounded-pill fw-bold border border-primary border-opacity-10">
-                        <i class="bi bi-stars me-1"></i> New: Intelligent Analytics
+                        class="badge bg-primary-brand bg-opacity-10 text-secondary-custom mb-4 px-3 py-2 rounded-pill fw-bold border border-primary border-opacity-10">
+                        <i class="bi bi-stars me-1"></i> Join the VIP Community
                     </span>
                     <h1 class="hero-title fw-bold mb-4">
-                        Grow without limits <br>
-                        <span class="text-gradient">With ProService.</span>
+                        Unlock Exclusive <br>
+                        <span class="text-gradient">Fan Experiences.</span>
                     </h1>
                     <p class="lead text-muted mb-5 col-lg-10">
-                        We provide cutting-edge solutions to help your business scale. Experience power, simplicity, and
-                        performance in one platform.
+                        Become a member today to access behind-the-scenes content, physical perks, and a community of
+                        like-minded fans.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="services.html" class="btn btn-primary-custom btn-lg shadow-lg">Get Started Now</a>
-                        <a href="contact.html" class="btn btn-outline-secondary btn-lg">View Demo</a>
+                        <a href="pricing.html" class="btn btn-primary-custom btn-lg shadow-lg">Become a Member</a>
+                        <a href="about.html" class="btn btn-outline-secondary btn-lg">Learn More</a>
                     </div>
 
                     <div class="mt-5 pt-3 border-top d-flex gap-5">
@@ -141,23 +136,23 @@
                     <!-- Modern Image Container -->
                     <div class="position-relative">
                         <!-- Decorative Elements -->
-                        <div class="position-absolute top-0 end-0 translate-middle-y bg-warning rounded-circle"
-                            style="width: 20px; height: 20px;"></div>
+                        <div class="dotted-pattern"></div>
 
                         <div class="rounded-4 overflow-hidden shadow-soft border border-light bg-white p-2">
-                            <img src="https://placehold.co/800x600/f8fafc/1e293b?text=Dashboard+UI" alt="Hero Image"
-                                class="img-fluid rounded-3 w-100">
+                            <img src="https://placehold.co/800x600/F6EBD8/C67B3F?text=Exclusive+Preview"
+                                alt="Fan Club Membership" class="img-fluid rounded-3 w-100">
                         </div>
 
                         <!-- Floating Card -->
                         <div class="card position-absolute bottom-0 start-0 translate-middle-x mb-4 ms-5 border-0 shadow-lg p-3 rounded-4 animate-float"
-                            style="max-width: 200px;">
+                            style="max-width: 200px; background-color: var(--accent-color);">
                             <div class="d-flex align-items-center gap-3">
-                                <div class="bg-success rounded-circle p-2 text-white"><i class="bi bi-graph-up"></i>
+                                <div class="bg-primary-brand rounded-circle p-2 text-white"><i
+                                        class="bi bi-heart-fill"></i>
                                 </div>
                                 <div>
-                                    <small class="d-block text-muted">Weekly Sales</small>
-                                    <span class="fw-bold text-success">+35% Growth</span>
+                                    <small class="d-block text-muted">Join the Loop</small>
+                                    <span class="fw-bold text-primary-brand">10k+ Members</span>
                                 </div>
                             </div>
                         </div>
@@ -165,18 +160,28 @@
                 </div>
             </div>
         </div>
+
+        <!-- Wave Divider -->
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
 
     <!-- ================= Features Section ================= -->
-    <section class="section-padding bg-white">
-        <div class="container">
+    <section class="section-padding bg-soft-sand position-relative">
+        <div class="container position-relative z-index-1">
             <div class="row align-items-end mb-5">
                 <div class="col-lg-6">
-                    <h6 class="text-uppercase text-secondary-brand fw-bold mb-2 ls-1">Why Choose Us</h6>
-                    <h2 class="fw-bold display-6 mb-0">Built for the next generation of business.</h2>
+                    <h6 class="text-uppercase text-primary-brand fw-bold mb-2 ls-1 premium-text">Privileged Access</h6>
+                    <h2 class="fw-bold display-6 mb-0">What you get as a member.</h2>
                 </div>
                 <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
-                    <a href="services.html" class="fw-bold text-decoration-none text-primary-brand">View all features <i
+                    <a href="pricing.html" class="fw-bold text-decoration-none text-primary-brand">Explore all tiers <i
                             class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
@@ -184,48 +189,48 @@
             <div class="row g-4">
                 <!-- Card 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card card-hover h-100 p-4 border-radius-lg">
+                    <div class="card card-hover h-100 p-4 border-radius-lg border-0">
                         <div class="card-body">
                             <div class="icon-box">
-                                <i class="bi bi-bar-chart-fill"></i>
+                                <i class="bi bi-play-btn-fill"></i>
                             </div>
-                            <h4 class="fw-bold mb-3">Analytics</h4>
-                            <p class="text-muted mb-4 line-clamp-3">Real-time data visualization that gives you
-                                confidence in every decision you make.</p>
-                            <a href="service-details.html"
-                                class="text-decoration-none fw-bold text-primary-brand stretched-link">Learn More <i
+                            <h4 class="fw-bold mb-3">Exclusive Content</h4>
+                            <p class="text-muted mb-4 line-clamp-3">Early access to videos, blog posts, and
+                                behind-the-scenes glimpses you won't find anywhere else.</p>
+                            <a href="register.html"
+                                class="text-decoration-none fw-bold text-primary-brand stretched-link">Join to Watch <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card card-hover h-100 p-4 border-radius-lg">
+                    <div class="card card-hover h-100 p-4 border-radius-lg border-0">
                         <div class="card-body">
                             <div class="icon-box">
-                                <i class="bi bi-shield-lock-fill"></i>
+                                <i class="bi bi-chat-heart-fill"></i>
                             </div>
-                            <h4 class="fw-bold mb-3">Security First</h4>
-                            <p class="text-muted mb-4 line-clamp-3">Enterprise-grade security built into the core,
-                                keeping your data safe 24/7/365.</p>
-                            <a href="service-details.html"
-                                class="text-decoration-none fw-bold text-primary-brand stretched-link">Learn More <i
+                            <h4 class="fw-bold mb-3">Community Hub</h4>
+                            <p class="text-muted mb-4 line-clamp-3">Interact with other fans in a private space. Access
+                                member-only threads and Q&A sessions.</p>
+                            <a href="register.html"
+                                class="text-decoration-none fw-bold text-primary-brand stretched-link">Say Hello <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card card-hover h-100 p-4 border-radius-lg">
+                    <div class="card card-hover h-100 p-4 border-radius-lg border-0">
                         <div class="card-body">
                             <div class="icon-box">
-                                <i class="bi bi-lightning-fill"></i>
+                                <i class="bi bi-gift-fill"></i>
                             </div>
-                            <h4 class="fw-bold mb-3">Fast & Scalable</h4>
-                            <p class="text-muted mb-4 line-clamp-3">Performance that adapts to your traffic. Spin up new
-                                instances in milliseconds.</p>
-                            <a href="service-details.html"
-                                class="text-decoration-none fw-bold text-primary-brand stretched-link">Learn More <i
+                            <h4 class="fw-bold mb-3">Physical Perks</h4>
+                            <p class="text-muted mb-4 line-clamp-3">VIP members receive seasonal gift boxes, signed
+                                merchandise, and exclusive event invites.</p>
+                            <a href="pricing.html"
+                                class="text-decoration-none fw-bold text-primary-brand stretched-link">View Perks <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -260,20 +265,19 @@
     </section>
 
     <!-- ================= CTA ================= -->
-    <section class="section-padding position-relative overflow-hidden">
+    <section class="section-padding position-relative overflow-hidden bg-white">
         <div class="container position-relative z-index-1">
             <div class="bg-primary-brand rounded-5 p-5 text-center shadow-lg position-relative overflow-hidden">
-                <!-- CTA BG Decoration -->
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-brand opacity-50"></div>
+                <div class="dotted-pattern opacity-10"></div>
 
                 <div class="position-relative z-index-1">
-                    <h2 class="fw-bold text-white mb-3 display-5">Start your 14-day free trial</h2>
-                    <p class="lead text-white-50 mb-5 max-w-2xl mx-auto">No credit card required. Cancel anytime. Join
-                        10,000+ startups scaling with us.</p>
+                    <h2 class="fw-bold text-white mb-3 display-5">Ready to join the family?</h2>
+                    <p class="lead text-white-50 mb-5 max-w-2xl mx-auto">Start with a free account or unlock everything
+                        with our premium and VIP tiers. Exclusive content awaits.</p>
                     <div class="d-flex justify-content-center gap-3">
-                        <a href="register.html" class="btn btn-light btn-lg px-5 fw-bold text-primary-brand">Get
-                            Started</a>
-                        <a href="contact.html" class="btn btn-outline-light btn-lg px-5 fw-bold">Contact Sales</a>
+                        <a href="register.html" class="btn btn-light btn-lg px-5 fw-bold text-primary-brand">Sign Up
+                            Free</a>
+                        <a href="pricing.html" class="btn btn-outline-light btn-lg px-5 fw-bold">View Plans</a>
                     </div>
                 </div>
             </div>
@@ -282,16 +286,15 @@
 
     <!-- ================= Footer ================= -->
     <footer class="footer pt-5 pb-3">
-        <div class="container">
+        <div class="container-header-footer">
             <div class="row g-5 pb-5 border-bottom">
                 <!-- Col 1: Brand -->
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <a href="index.html" class="d-inline-block mb-3 text-decoration-none">
-                        <span class="fw-bold fs-3 text-text-main">ProService<span
-                                class="text-primary-brand">.</span></span>
+                        <img src="assets/images/logo.svg" alt="FanClub Logo" width="180" height="60">
                     </a>
                     <p class="text-muted pe-lg-4">
-                        We build software that empowers businesses to move faster and break things less.
+                        We build communities that empower fans to connect closer and experience more.
                     </p>
                     <div class="d-flex gap-3 mt-4">
                         <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
@@ -341,7 +344,7 @@
 
             <!-- Copyright -->
             <div class="pt-4 text-center text-muted small">
-                <p>&copy; 2026 ProService Inc. All rights reserved.</p>
+                <p>&copy; 2026 FanClub VIP. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr" data-bs-theme="light">
 
 <head>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | ProService Admin</title>
+    <title>Member Dashboard | FanClub</title>
     <!-- CSS Dependencies -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -22,19 +23,21 @@
         <!-- Sidebar -->
         <div class="bg-white border-end" id="sidebar-wrapper">
             <div class="sidebar-heading bg-white d-flex align-items-center justify-content-between">
-                <a href="index.html" class="text-decoration-none text-primary-brand fs-4 fw-bold">ProService<span
-                        class="text-accent-color">.</span></a>
+                <a href="index.html" class="text-decoration-none">
+                    <img src="assets/images/logo.svg" alt="FanClub Logo" width="180" height="60">
+                </a>
                 <button class="btn btn-sm btn-link d-md-none text-muted" id="sidebarClose"><i
                         class="bi bi-x-lg"></i></button>
             </div>
             <div class="list-group list-group-flush pt-2 gap-1">
-                <a href="#" class="list-group-item list-group-item-action active"><i
+                <a href="dashboard.html" class="list-group-item list-group-item-action active"><i
                         class="bi bi-speedometer2 me-2"></i> Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-people me-2"></i> Users</a>
-                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-cart me-2"></i> Orders</a>
-                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-envelope me-2"></i> Messages
-                    <span class="badge bg-danger rounded-pill ms-auto small">3</span></a>
-                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-gear me-2"></i> Settings</a>
+                <a href="content-library.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-collection-play me-2"></i> Content Library</a>
+                <a href="community.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-chat-dots me-2"></i> Community</a>
+                <a href="profile.html" class="list-group-item list-group-item-action"><i class="bi bi-person me-2"></i>
+                    Profile Settings</a>
                 <div class="mt-auto border-top mt-4 pt-3 mx-3">
                     <a href="index.html" class="list-group-item list-group-item-action text-danger px-0"><i
                             class="bi bi-box-arrow-left me-2"></i> Logout</a>
@@ -46,7 +49,7 @@
         <div id="page-content-wrapper">
             <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-glass border-bottom py-3 sticky-top backdrop-blur">
-                <div class="container-fluid">
+                <div class="container-header-footer">
                     <button class="btn btn-link text-muted" id="sidebarToggle"><i class="bi bi-list fs-4"></i></button>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,7 +57,8 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse d-lg-flex align-items-center justify-content-between"
+                        id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center gap-3">
                             <li class="nav-item">
                                 <button class="btn btn-light rounded-circle p-2 border" id="theme-toggle"><i
@@ -63,12 +67,12 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#"
                                     id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                                    <img src="https://placehold.co/40x40/e2e8f0/64748b?text=A"
+                                    <img src="https://placehold.co/40x40/F6EBD8/C67B3F?text=AJ"
                                         class="rounded-circle border border-2 border-white shadow-sm" width="36"
                                         height="36">
                                     <div class="d-none d-lg-block text-start lh-1">
-                                        <span class="d-block fw-bold small">Administrator</span>
-                                        <small class="text-muted" style="font-size: 0.75rem;">Super Admin</small>
+                                        <span class="d-block fw-bold small">Alex Johnson</span>
+                                        <small class="text-muted" style="font-size: 0.75rem;">Premium Member</small>
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg p-2 rounded-4">
@@ -88,127 +92,122 @@
             <!-- Main Content -->
             <div class="container-fluid p-4">
                 <div class="row g-4 mb-4">
-                    <!-- Stat Card 1 -->
+                    <!-- Membership Status -->
                     <div class="col-md-3">
-                        <div class="card card-hover border-0 h-100 p-3">
+                        <div class="card card-hover border-0 h-100 p-3 bg-white">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Total Revenue</h6>
-                                    <div class="icon-box bg-success bg-opacity-10 text-success rounded-circle"
+                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Current Tier</h6>
+                                    <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                         style="width: 32px; height: 32px; font-size: 1rem; margin:0;"><i
-                                            class="bi bi-currency-dollar"></i></div>
+                                            class="bi bi-award"></i></div>
                                 </div>
-                                <h3 class="fw-bold text-text-main mb-1">$24,500</h3>
-                                <small class="text-success fw-bold bg-success bg-opacity-10 px-2 py-1 rounded-pill"
-                                    style="font-size: 0.75rem;"><i class="bi bi-arrow-up"></i> 12%</small>
+                                <h3 class="fw-bold text-text-main mb-1">Superfan</h3>
+                                <small
+                                    class="text-primary-brand fw-bold bg-primary-brand bg-opacity-10 px-2 py-1 rounded-pill"
+                                    style="font-size: 0.75rem;">Renews: Oct 12</small>
                             </div>
                         </div>
                     </div>
-                    <!-- Stat Card 2 -->
+                    <!-- Exclusive Content -->
                     <div class="col-md-3">
-                        <div class="card card-hover border-0 h-100 p-3">
+                        <div class="card card-hover border-0 h-100 p-3 bg-white">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">New Orders</h6>
-                                    <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle"
+                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Unlocked Posts</h6>
+                                    <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                         style="width: 32px; height: 32px; font-size: 1rem; margin:0;"><i
-                                            class="bi bi-cart"></i></div>
+                                            class="bi bi-unlock"></i></div>
                                 </div>
-                                <h3 class="fw-bold text-text-main mb-1">125</h3>
+                                <h3 class="fw-bold text-text-main mb-1">42</h3>
                                 <small class="text-success fw-bold bg-success bg-opacity-10 px-2 py-1 rounded-pill"
-                                    style="font-size: 0.75rem;"><i class="bi bi-arrow-up"></i> 5%</small>
+                                    style="font-size: 0.75rem;">+5 this week</small>
                             </div>
                         </div>
                     </div>
-                    <!-- Stat Card 3 -->
+                    <!-- Community Engagement -->
                     <div class="col-md-3">
-                        <div class="card card-hover border-0 h-100 p-3">
+                        <div class="card card-hover border-0 h-100 p-3 bg-white">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Support Tickets</h6>
-                                    <div class="icon-box bg-warning bg-opacity-10 text-warning rounded-circle"
+                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Your Karma</h6>
+                                    <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                         style="width: 32px; height: 32px; font-size: 1rem; margin:0;"><i
-                                            class="bi bi-ticket"></i></div>
+                                            class="bi bi-lightning-charge"></i></div>
                                 </div>
-                                <h3 class="fw-bold text-text-main mb-1">12</h3>
-                                <small class="text-danger fw-bold bg-danger bg-opacity-10 px-2 py-1 rounded-pill"
-                                    style="font-size: 0.75rem;"><i class="bi bi-arrow-down"></i> +2</small>
+                                <h3 class="fw-bold text-text-main mb-1">1,250</h3>
+                                <small class="text-muted fw-bold bg-light px-2 py-1 rounded-pill"
+                                    style="font-size: 0.75rem;">Level 5 Member</small>
                             </div>
                         </div>
                     </div>
-                    <!-- Stat Card 4 -->
+                    <!-- Downloads Remaining -->
                     <div class="col-md-3">
-                        <div class="card card-hover border-0 h-100 p-3">
+                        <div class="card card-hover border-0 h-100 p-3 bg-white">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Total Users</h6>
-                                    <div class="icon-box bg-info bg-opacity-10 text-info rounded-circle"
+                                    <h6 class="text-muted text-uppercase small fw-bold mb-0">Downloads</h6>
+                                    <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                         style="width: 32px; height: 32px; font-size: 1rem; margin:0;"><i
-                                            class="bi bi-people"></i></div>
+                                            class="bi bi-download"></i></div>
                                 </div>
-                                <h3 class="fw-bold text-text-main mb-1">1,240</h3>
-                                <small class="text-success fw-bold bg-success bg-opacity-10 px-2 py-1 rounded-pill"
-                                    style="font-size: 0.75rem;"><i class="bi bi-arrow-up"></i> 8%</small>
+                                <h3 class="fw-bold text-text-main mb-1">3/5</h3>
+                                <small class="text-muted fw-bold" style="font-size: 0.75rem;">Reset in 12 days</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row g-4">
-                    <!-- Chart -->
                     <div class="col-lg-8">
-                        <div class="card card-hover border-0 h-100">
+                        <div class="card card-hover border-0 h-100 bg-white">
                             <div class="card-header bg-white border-bottom py-3">
-                                <h6 class="fw-bold mb-0">Revenue Overview</h6>
+                                <h6 class="fw-bold mb-0">Engagement Map</h6>
                             </div>
                             <div class="card-body">
-                                <canvas id="analyticsChart" height="300"></canvas>
+                                <canvas id="engagementChart" height="300"></canvas>
                             </div>
                         </div>
                     </div>
-                    <!-- Recent Orders -->
+                    <!-- Newest Content -->
                     <div class="col-lg-4">
-                        <div class="card card-hover border-0 h-100">
+                        <div class="card card-hover border-0 h-100 bg-white">
                             <div
                                 class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center">
-                                <h6 class="fw-bold mb-0">Recent Orders</h6>
-                                <a href="#" class="btn btn-sm btn-light rounded-pill px-3">View All</a>
+                                <h6 class="fw-bold mb-0">Latest Unlocks</h6>
+                                <a href="content-library.html" class="btn btn-sm btn-light rounded-pill px-3">See
+                                    All</a>
                             </div>
                             <div class="card-body p-0">
                                 <div class="list-group list-group-flush">
                                     <div class="list-group-item d-flex align-items-center gap-3 py-3 border-light">
-                                        <div class="icon-box bg-light text-primary-brand rounded-circle"
+                                        <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                             style="width: 40px; height: 40px; margin-bottom: 0; font-size: 1rem;"><i
-                                                class="bi bi-bag"></i></div>
+                                                class="bi bi-play-circle-fill"></i></div>
                                         <div>
-                                            <h6 class="fw-bold mb-0 text-sm">Order #1234</h6>
-                                            <small class="text-muted" style="font-size: 0.75rem;">Pro Plan - $59</small>
+                                            <h6 class="fw-bold mb-0 text-sm">Behind the Scenes #4</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Premium Video</small>
                                         </div>
-                                        <span
-                                            class="badge bg-success bg-opacity-10 text-success ms-auto rounded-pill">Paid</span>
                                     </div>
                                     <div class="list-group-item d-flex align-items-center gap-3 py-3 border-light">
-                                        <div class="icon-box bg-light text-primary-brand rounded-circle"
+                                        <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                             style="width: 40px; height: 40px; margin-bottom: 0; font-size: 1rem;"><i
-                                                class="bi bi-bag"></i></div>
+                                                class="bi bi-file-earmark-pdf-fill"></i></div>
                                         <div>
-                                            <h6 class="fw-bold mb-0 text-sm">Order #1235</h6>
-                                            <small class="text-muted" style="font-size: 0.75rem;">Basic Plan -
-                                                $29</small>
+                                            <h6 class="fw-bold mb-0 text-sm">Digital Artwork Set</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Exclusive
+                                                Download</small>
                                         </div>
-                                        <span
-                                            class="badge bg-warning bg-opacity-10 text-warning ms-auto rounded-pill">Pending</span>
                                     </div>
                                     <div class="list-group-item d-flex align-items-center gap-3 py-3 border-light">
-                                        <div class="icon-box bg-light text-primary-brand rounded-circle"
+                                        <div class="icon-box bg-primary-brand bg-opacity-10 text-primary-brand rounded-circle"
                                             style="width: 40px; height: 40px; margin-bottom: 0; font-size: 1rem;"><i
-                                                class="bi bi-bag"></i></div>
+                                                class="bi bi-postcard-heart-fill"></i></div>
                                         <div>
-                                            <h6 class="fw-bold mb-0 text-sm">Order #1236</h6>
-                                            <small class="text-muted" style="font-size: 0.75rem;">Pro Plan - $59</small>
+                                            <h6 class="fw-bold mb-0 text-sm">October VIP Update</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Private Blog
+                                                Post</small>
                                         </div>
-                                        <span
-                                            class="badge bg-success bg-opacity-10 text-success ms-auto rounded-pill">Paid</span>
                                     </div>
                                 </div>
                             </div>

@@ -10,52 +10,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Brand Colors - Modern SaaS Palette 
-       Deep Blue/Indigo base with vibrant accents 
-    */
-    --primary-color: #4F46E5;
-    /* Indigo 600 - Dynamic Action */
-    --secondary-color: #4338CA;
-    /* Indigo 700 - Hover State */
-    --accent-color: #8B5CF6;
-    /* Violet 500 - Gradients/Accents */
-    --tertiary-color: #F8FAFC;
-    /* Slate 50 - Background */
-    --success-color: #10B981;
-    /* Emerald 500 */
-    --warning-color: #F59E0B;
-    /* Amber 500 */
+    /* Fan Club / Membership Palette */
+    --primary-color: #C67B3F;
+    /* Warm Orange - Buttons, CTAs, Highlights */
+    --secondary-color: #a66634;
+    /* Darker Orange for Hover */
+    --accent-color: #F6EBD8;
+    /* Warm Ivory - Main Background, Cards */
+    --tertiary-color: #E8D8C3;
+    /* Soft Sand - Alternate Sections, Borders */
 
     /* Functional Colors */
-    --body-bg: #F8FAFC;
-    /* Light Slate Background */
-    --card-bg: #FFFFFF;
-    --text-main: #1E293B;
-    /* Slate 800 */
-    --text-muted: #64748B;
-    /* Slate 500 */
-    --border-color: #E2E8F0;
-    /* Slate 200 */
+    --body-bg: #F6EBD8;
+    --card-bg: #F6EBD8;
+    --section-alt: #E8D8C3;
+    --text-main: #3D2D1E;
+    /* Darker warm tone for readability */
+    --text-muted: #7A634E;
+    /* Muted warm tone */
+    --border-color: #E8D8C3;
+    --success-color: #8B9D77;
+    /* Sage-like success color to match warm theme */
+    --warning-color: #E2A76F;
 
     /* Typography - Clean & Editorial */
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
-    /* Unified font family for cleaner look */
+    --font-heading: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
 
-    /* Modern SaaS Tokens */
+    /* Modern Tokens */
     --border-radius-sm: 0.5rem;
-    --border-radius-lg: 1rem;
-    --border-radius-xl: 1.5rem;
+    --border-radius-lg: 1.25rem;
+    --border-radius-xl: 2rem;
 
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-sm: 0 2px 4px rgba(61, 45, 30, 0.05);
+    --shadow-md: 0 4px 12px rgba(61, 45, 30, 0.08);
+    --shadow-lg: 0 10px 25px rgba(61, 45, 30, 0.1);
+    --shadow-hover: 0 20px 35px rgba(61, 45, 30, 0.12);
 
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-bg: rgba(246, 235, 216, 0.8);
+    --glass-border: rgba(232, 216, 195, 0.5);
 
-    --section-padding: 6rem 0;
+    --section-padding: 7rem 0;
 }
 
 /* Dark Mode Variables */
@@ -74,6 +69,8 @@
     --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
 }
+
+
 
 /* =========================================
    2. Global Resets & Typography
@@ -124,7 +121,7 @@ a {
 
 /* Gradients */
 .text-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--body-bg), var(--primary-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -149,13 +146,22 @@ a {
 }
 
 .card-hover:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.03);
     box-shadow: var(--shadow-hover);
     border-color: var(--primary-color);
+    background-color: var(--card-bg);
 }
 
 .shadow-soft {
     box-shadow: var(--shadow-lg);
+}
+
+.container-header-footer {
+    width: 100%;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* =========================================
@@ -176,6 +182,36 @@ a {
     box-shadow: var(--shadow-sm);
 }
 
+/* ===== Navbar Alignment Fix ===== */
+.navbar .container-header-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Desktop navbar alignment only */
+@media (min-width: 992px) {
+    .offcanvas-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.navbar .d-flex.align-items-center {
+    align-items: center !important;
+}
+
 .navbar-brand {
     font-weight: 800;
     font-size: 1.5rem;
@@ -188,11 +224,19 @@ a {
     font-size: 0.95rem;
     color: var(--text-muted);
     padding: 0.5rem 1rem !important;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
+}
+
+.navbar .vr-separator {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-color);
+    margin: 0 0.5rem;
 }
 
 /* =========================================
@@ -210,7 +254,7 @@ a {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(198, 123, 63, 0.1) 0%, rgba(246, 235, 216, 0) 70%);
     top: -200px;
     right: -100px;
     z-index: -1;
@@ -219,7 +263,7 @@ a {
 }
 
 [data-bs-theme="dark"] .hero-bg-blob {
-    background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+    background: radial-gradient(circle, rgba(198, 123, 63, 0.2) 0%, rgba(61, 45, 30, 0) 70%);
 }
 
 
@@ -243,9 +287,10 @@ a {
 .btn {
     border-radius: 2rem;
     /* Pill shape standard */
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 1.25rem;
     font-weight: 600;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-primary-custom {
@@ -257,8 +302,8 @@ a {
 
 .btn-primary-custom:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(198, 123, 63, 0.4);
     color: white;
 }
 
@@ -293,6 +338,7 @@ a {
     padding: 5rem 0 3rem;
     background-color: var(--card-bg);
     border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
 }
 
 .footer h5 {

@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background (same warm tone style as logo) -->
+  <rect width="64" height="64" rx="12" fill="#f5a577d5"/>
+
+  <!-- Shield Icon -->
+  <path d="M32 10 
+           Q50 10 50 28 
+           Q50 48 32 56 
+           Q14 48 14 28 
+           Q14 10 32 10Z"
+        fill="#c4b4a1ff"/>
+
+  <!-- Star -->
+  <polygon points="32,18 36,26 46,26 38,32 41,42 32,36 23,42 26,32 18,26 28,26"
+           fill="#C67B3F"/>
+
+</svg>

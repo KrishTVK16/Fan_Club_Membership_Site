@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings | FanClub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white border-end" id="sidebar-wrapper">
+            <div class="sidebar-heading bg-white d-flex align-items-center justify-content-between">
+                <a href="index.html" class="text-decoration-none">
+                    <img src="assets/images/logo.svg" alt="FanClub Logo" width="180" height="60">
+                </a>
+                <button class="btn btn-sm btn-link d-md-none text-muted" id="sidebarClose"><i
+                        class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="list-group list-group-flush pt-2 gap-1">
+                <a href="dashboard.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-speedometer2 me-2"></i> Dashboard</a>
+                <a href="content-library.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-collection-play me-2"></i> Content Library</a>
+                <a href="community.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-chat-dots me-2"></i> Community</a>
+                <a href="profile.html" class="list-group-item list-group-item-action active"><i
+                        class="bi bi-person me-2"></i> Profile Settings</a>
+                <div class="mt-auto border-top mt-4 pt-3 mx-3">
+                    <a href="index.html" class="list-group-item list-group-item-action text-danger px-0"><i
+                            class="bi bi-box-arrow-left me-2"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-glass border-bottom py-3 sticky-top backdrop-blur">
+                <div class="container-header-footer d-flex align-items-center justify-content-between">
+                    <button class="btn btn-link text-muted" id="sidebarToggle"><i class="bi bi-list fs-4"></i></button>
+                    <h4 class="fw-bold mb-0 ms-3 d-none d-md-block">My Profile</h4>
+                    <div class="ms-auto d-flex align-items-center gap-3">
+                        <button class="btn btn-light rounded-circle p-2 border" id="theme-toggle"><i
+                                class="bi bi-moon-fill"></i></button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="container-fluid p-4">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card border-0 bg-white p-4 text-center rounded-4 shadow-sm">
+                            <div class="position-relative d-inline-block mx-auto mb-4">
+                                <img src="https://placehold.co/128x128/F6EBD8/C67B3F?text=AJ"
+                                    class="rounded-circle border border-4 border-white shadow-sm" width="128"
+                                    height="128">
+                                <button
+                                    class="btn btn-primary-custom btn-sm rounded-circle position-absolute bottom-0 end-0 shadow-sm"
+                                    style="width: 32px; height: 32px; padding: 0;"><i class="bi bi-pencil-fill"
+                                        style="font-size: 0.8rem;"></i></button>
+                            </div>
+                            <h4 class="fw-bold mb-1">Alex Johnson</h4>
+                            <p class="text-muted small mb-4">Member since July 2025</p>
+                            <div class="d-flex justify-content-around border-top pt-4">
+                                <div>
+                                    <h5 class="fw-bold mb-0">12</h5>
+                                    <small class="text-muted">Posts</small>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">1.2k</h5>
+                                    <small class="text-muted">Karma</small>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">42</h5>
+                                    <small class="text-muted">Unlocked</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 bg-white p-4 mt-4 rounded-4 shadow-sm">
+                            <h6 class="fw-bold mb-3">Membership Details</h6>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="text-muted small">Current Plan</span>
+                                <span class="badge bg-primary-brand">Superfan ($10/mo)</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="text-muted small">Renewal Date</span>
+                                <span class="fw-bold small">Oct 12, 2026</span>
+                            </div>
+                            <a href="pricing.html" class="btn btn-outline-secondary btn-sm w-100 mb-2">Change Plan</a>
+                            <button class="btn btn-link text-danger text-decoration-none btn-sm w-100 small">Cancel
+                                Membership</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="card border-0 bg-white p-4 rounded-4 shadow-sm">
+                            <h5 class="fw-bold mb-4">Personal Information</h5>
+                            <form>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">First Name</label>
+                                        <input type="text" class="form-control bg-light border-0" value="Alex">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Last Name</label>
+                                        <input type="text" class="form-control bg-light border-0" value="Johnson">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small fw-bold">Email Address</label>
+                                        <input type="email" class="form-control bg-light border-0"
+                                            value="alex.j@example.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small fw-bold">Bio</label>
+                                        <textarea class="form-control bg-light border-0"
+                                            rows="3">Big fan of the channel since the beginning! Passionate about behind-the-scenes content.</textarea>
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold mb-4 pt-2 border-top">Notification Settings</h5>
+                                <div class="mb-4">
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox" id="emailNotif" checked>
+                                        <label class="form-check-label small" for="emailNotif">New content email
+                                            notifications</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox" id="commNotif" checked>
+                                        <label class="form-check-label small" for="commNotif">Community reply
+                                            notifications</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary-custom px-5 shadow-md">Save
+                                    Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

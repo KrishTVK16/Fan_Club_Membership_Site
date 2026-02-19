@@ -1,0 +1,37 @@
+<svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="180" height="50" fill="#f5a577d5"/>
+
+  <!-- Shield Icon -->
+  <path d="M28 8 
+           Q45 8 45 23 
+           Q45 38 28 45 
+           Q11 38 11 23 
+           Q11 8 28 8Z"
+        fill="#c4b4a1ff"/>
+
+  <!-- Star -->
+  <polygon points="28,14 31,21 39,21 32.5,26 35,34 28,29 21,34 23.5,26 17,21 25,21"
+           fill="#C67B3F"/>
+
+  <!-- Website Name -->
+  <text x="55" y="28"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="18"
+        font-weight="700"
+        fill="#3D2D1E">
+        FanClub.
+  </text>
+
+  <!-- Subtitle -->
+  <text x="55" y="42"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="10"
+        font-weight="500"
+        letter-spacing="1"
+        fill="#7A634E">
+        MemberShip
+  </text>
+
+</svg>
