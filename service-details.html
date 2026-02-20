@@ -53,19 +53,19 @@
                             <a class="nav-link" href="home-2.html">Home 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">News</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="services.html">Perks</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Plans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Info
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 bg-card-theme rounded-4">
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="blog.html">News</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="about.html">About</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="pricing.html">Plans</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="contact.html">Contact</a></li>
+                            </ul>
                         </li>
                     </ul>
 
@@ -82,7 +82,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="section-padding bg-light position-relative overflow-hidden">
+    <header class="hero-section bg-section-alt position-relative overflow-hidden">
         <div class="hero-bg-blob" style="right: -200px; top: -200px; opacity: 0.3;"></div>
         <div class="container position-relative z-index-1">
             <nav aria-label="breadcrumb" class="mb-4">
@@ -101,23 +101,23 @@
     </header>
 
     <!-- Content -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-card-theme">
         <div class="container">
             <div class="row g-5">
                 <!-- Sidebar -->
                 <div class="col-lg-4 order-lg-2">
                     <div class="position-sticky" style="top: 100px;">
-                        <div class="card border-0 bg-light p-4 rounded-4 mb-4 shadow-sm">
+                        <div class="card border-0 bg-section-alt p-4 rounded-4 mb-4 shadow-sm">
                             <h5 class="fw-bold mb-3 text-primary-brand">More Perks</h5>
                             <div class="list-group list-group-flush bg-transparent gap-2">
                                 <a href="#"
-                                    class="list-group-item list-group-item-action bg-white border rounded-3 active fw-bold py-3"><i
+                                    class="list-group-item list-group-item-action bg-card-theme border rounded-3 active fw-bold py-3"><i
                                         class="bi bi-star-fill me-2"></i> Early Access</a>
                                 <a href="#"
-                                    class="list-group-item list-group-item-action bg-white border rounded-3 py-3"><i
+                                    class="list-group-item list-group-item-action bg-card-theme border rounded-3 py-3"><i
                                         class="bi bi-chat-heart me-2 text-muted"></i> Private Community</a>
                                 <a href="#"
-                                    class="list-group-item list-group-item-action bg-white border rounded-3 py-3"><i
+                                    class="list-group-item list-group-item-action bg-card-theme border rounded-3 py-3"><i
                                         class="bi bi-box-seam me-2 text-muted"></i> Physical Merch</a>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                     <div class="row g-4 mb-5">
                         <div class="col-md-6">
                             <div class="d-flex gap-3">
-                                <div class="icon-box bg-light text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
+                                <div class="icon-box bg-section-alt text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
                                     style="width: 48px; height: 48px; margin: 0; font-size: 1.25rem;"><span
                                         class="fw-bold">1</span></div>
                                 <div>
@@ -155,7 +155,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="d-flex gap-3">
-                                <div class="icon-box bg-light text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
+                                <div class="icon-box bg-section-alt text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
                                     style="width: 48px; height: 48px; margin: 0; font-size: 1.25rem;"><span
                                         class="fw-bold">2</span></div>
                                 <div>
@@ -166,7 +166,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="d-flex gap-3">
-                                <div class="icon-box bg-light text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
+                                <div class="icon-box bg-section-alt text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
                                     style="width: 48px; height: 48px; margin: 0; font-size: 1.25rem;"><span
                                         class="fw-bold">3</span></div>
                                 <div>
@@ -177,7 +177,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="d-flex gap-3">
-                                <div class="icon-box bg-light text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
+                                <div class="icon-box bg-section-alt text-primary-brand shadow-sm flex-shrink-0 rounded-circle"
                                     style="width: 48px; height: 48px; margin: 0; font-size: 1.25rem;"><span
                                         class="fw-bold">4</span></div>
                                 <div>
@@ -260,7 +260,7 @@
                     <h5 class="fw-bold">Stay Updated</h5>
                     <p class="text-muted small mb-3">Get the latest news and updates directly in your inbox.</p>
                     <form action="#">
-                        <div class="input-group bg-white p-1 rounded-pill border">
+                        <div class="input-group bg-card-theme p-1 rounded-pill border">
                             <input type="email" class="form-control border-0 bg-transparent ps-3"
                                 placeholder="Enter email" aria-label="Email">
                             <button class="btn btn-primary-custom rounded-pill" type="button">Subscribe</button>

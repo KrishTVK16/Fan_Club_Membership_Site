@@ -15,12 +15,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-light">
+<body class="bg-section-alt">
 
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-white border-end" id="sidebar-wrapper">
-            <div class="sidebar-heading bg-white d-flex align-items-center justify-content-between">
+        <div class="bg-card-theme border-end" id="sidebar-wrapper">
+            <div class="sidebar-heading bg-card-theme d-flex align-items-center justify-content-between">
                 <a href="index.html" class="text-decoration-none">
                     <img src="assets/images/logo.svg" alt="FanClub Logo" width="180" height="60">
                     <br><small class="text-muted fs-6 fw-normal">Admin Panel</small>
@@ -66,7 +66,7 @@
                     <!-- Stats -->
                     <div class="col-md-3">
                         <div
-                            class="card border-0 bg-white p-3 rounded-4 shadow-sm border-start border-4 border-primary">
+                            class="card border-0 bg-card-theme p-3 rounded-4 shadow-sm border-start border-4 border-primary">
                             <div class="card-body">
                                 <h6 class="text-muted small fw-bold text-uppercase mb-2">Total MRR</h6>
                                 <h3 class="fw-bold mb-1">$12,450</h3>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card border-0 bg-white p-3 rounded-4 shadow-sm">
+                        <div class="card border-0 bg-card-theme p-3 rounded-4 shadow-sm">
                             <div class="card-body">
                                 <h6 class="text-muted small fw-bold text-uppercase mb-2">Active Members</h6>
                                 <h3 class="fw-bold mb-1">2,840</h3>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card border-0 bg-white p-3 rounded-4 shadow-sm">
+                        <div class="card border-0 bg-card-theme p-3 rounded-4 shadow-sm">
                             <div class="card-body">
                                 <h6 class="text-muted small fw-bold text-uppercase mb-2">Churn Rate</h6>
                                 <h3 class="fw-bold mb-1">1.2%</h3>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card border-0 bg-white p-3 rounded-4 shadow-sm">
+                        <div class="card border-0 bg-card-theme p-3 rounded-4 shadow-sm">
                             <div class="card-body">
                                 <h6 class="text-muted small fw-bold text-uppercase mb-2">Pending VIPs</h6>
                                 <h3 class="fw-bold mb-1">24</h3>
@@ -105,13 +105,13 @@
 
                 <div class="row g-4">
                     <div class="col-lg-8">
-                        <div class="card border-0 bg-white p-4 rounded-4 shadow-sm">
+                        <div class="card border-0 bg-card-theme p-4 rounded-4 shadow-sm">
                             <h6 class="fw-bold mb-4">Membership Growth</h6>
                             <canvas id="growthChart" height="250"></canvas>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card border-0 bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="card border-0 bg-card-theme p-4 rounded-4 shadow-sm h-100">
                             <h6 class="fw-bold mb-4">Revenue by Tier</h6>
                             <canvas id="tierChart" height="250"></canvas>
                         </div>

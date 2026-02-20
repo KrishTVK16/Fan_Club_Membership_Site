@@ -64,19 +64,19 @@
                             <a class="nav-link" href="home-2.html">Home 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">News</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="services.html">Perks</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Plans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Info
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 bg-card-theme rounded-4">
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="blog.html">News</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="about.html">About</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="pricing.html">Plans</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="contact.html">Contact</a></li>
+                            </ul>
                         </li>
                     </ul>
 
@@ -101,7 +101,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <span
-                        class="badge bg-primary-brand bg-opacity-10 text-secondary-custom mb-4 px-3 py-2 rounded-pill fw-bold border border-primary border-opacity-10">
+                        class="badge bg-primary-brand bg-opacity-10 text-primary-brand mb-4 px-3 py-2 rounded-pill fw-bold border border-primary border-opacity-10">
                         <i class="bi bi-stars me-1"></i> Join the VIP Community
                     </span>
                     <h1 class="hero-title fw-bold mb-4">
@@ -112,9 +112,24 @@
                         Become a member today to access behind-the-scenes content, physical perks, and a community of
                         like-minded fans.
                     </p>
-                    <div class="d-flex flex-wrap gap-3">
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
                         <a href="pricing.html" class="btn btn-primary-custom btn-lg shadow-lg">Become a Member</a>
-                        <a href="about.html" class="btn btn-outline-secondary btn-lg">Learn More</a>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary btn-lg dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Explore Info
+                            </button>
+                            <ul class="dropdown-menu shadow-lg border-0 bg-card-theme rounded-4 p-2">
+                                <li><a class="dropdown-item py-3 px-4 rounded-4" href="about.html"><i
+                                            class="bi bi-info-circle me-2"></i> About Us</a></li>
+                                <li><a class="dropdown-item py-3 px-4 rounded-4" href="contact.html"><i
+                                            class="bi bi-envelope me-2"></i> Contact</a></li>
+                                <li><a class="dropdown-item py-3 px-4 rounded-4" href="blog.html"><i
+                                            class="bi bi-newspaper me-2"></i> News</a></li>
+                                <li><a class="dropdown-item py-3 px-4 rounded-4" href="pricing.html"><i
+                                            class="bi bi-tags me-2"></i> Plans</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="mt-5 pt-3 border-top d-flex gap-5">
@@ -138,9 +153,9 @@
                         <!-- Decorative Elements -->
                         <div class="dotted-pattern"></div>
 
-                        <div class="rounded-4 overflow-hidden shadow-soft border border-light bg-white p-2">
-                            <img src="https://placehold.co/800x600/F6EBD8/C67B3F?text=Exclusive+Preview"
-                                alt="Fan Club Membership" class="img-fluid rounded-3 w-100">
+                        <div class="rounded-4 overflow-hidden shadow-soft border border-light bg-card-theme p-2">
+                            <img src="assets/images/hero2.jfif" alt="Fan Club Membership"
+                                class="img-fluid rounded-3 w-100">
                         </div>
 
                         <!-- Floating Card -->
@@ -239,6 +254,189 @@
         </div>
     </section>
 
+    <!-- ================= Upcoming Events Section (NEW) ================= -->
+    <section class="section-padding bg-main-theme">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-primary-brand fw-bold mb-2">Save the Date</h6>
+                <h2 class="fw-bold display-6">Upcoming Community Events</h2>
+                <p class="text-muted col-lg-6 mx-auto">Don't miss out on our exclusive gatherings. From digital hangouts
+                    to fan meetups.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <img src="assets/images/fanevent.jpg" class="card-img-top" alt="Fan Meetup"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary-brand bg-opacity-10 text-primary-brand">Live Meetup</span>
+                                <small class="text-muted"><i class="bi bi-calendar-event me-1"></i> March 15,
+                                    2026</small>
+                            </div>
+                            <h5 class="fw-bold">Spring London Fan Meet</h5>
+                            <p class="text-muted small">Join us for an exclusive afternoon of coffee, community, and
+                                special announcements in the heart of London.</p>
+                            <a href="#" class="btn btn-outline-secondary btn-sm w-100 mt-2">Reserve Spot</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <img src="assets/images/worldtour.jpg" class="card-img-top" alt="Virtual Q&A"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-info bg-opacity-10 text-info">Digital Event</span>
+                                <small class="text-muted"><i class="bi bi-calendar-event me-1"></i> April 02,
+                                    2026</small>
+                            </div>
+                            <h5 class="fw-bold">Member-Only Q&A Session</h5>
+                            <p class="text-muted small">Got questions? Our founders will be answering everything live on
+                                our private streaming platform.</p>
+                            <a href="#" class="btn btn-outline-secondary btn-sm w-100 mt-2">Set Reminder</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <img src="assets/images/contactinfo.jpg" class="card-img-top" alt="Early Access"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-warning bg-opacity-10 text-warning">Exclusive Release</span>
+                                <small class="text-muted"><i class="bi bi-calendar-event me-1"></i> April 10,
+                                    2026</small>
+                            </div>
+                            <h5 class="fw-bold">The Great Outdoors Vlog</h5>
+                            <p class="text-muted small">VIP members get 48 hours of early access to our most anticipated
+                                travel documentary of the year.</p>
+                            <a href="#" class="btn btn-outline-secondary btn-sm w-100 mt-2">View Countdown</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Testimonials Section (NEW) ================= -->
+    <section class="section-padding bg-section-alt">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-primary-brand fw-bold mb-2">Member Voices</h6>
+                <h2 class="fw-bold display-6">Created by fans, for fans.</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card border-0 bg-card-theme p-4 rounded-4 shadow-sm h-100">
+                        <div class="text-primary-brand mb-3 fs-3"><i class="bi bi-quote"></i></div>
+                        <p class="text-muted mb-4">"Being part of this club isn't just about the perks; it's about the
+                            connection. I've met my best friends here through the private discord!"</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-brand rounded-circle d-flex align-items-center justify-content-center text-white fw-bold"
+                                style="width: 48px; height: 48px;">SA</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah Adams</h6>
+                                <small class="text-muted">Gold Member</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 bg-card-theme p-4 rounded-4 shadow-sm h-100">
+                        <div class="text-primary-brand mb-3 fs-3"><i class="bi bi-quote"></i></div>
+                        <p class="text-muted mb-4">"The early access to content is a game changer. I love seeing the raw
+                            footage before the polished videos go live. Truly special."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-brand rounded-circle d-flex align-items-center justify-content-center text-white fw-bold"
+                                style="width: 48px; height: 48px;">MJ</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Marcus Johnson</h6>
+                                <small class="text-muted">VIP Member</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 bg-card-theme p-4 rounded-4 shadow-sm h-100">
+                        <div class="text-primary-brand mb-3 fs-3"><i class="bi bi-quote"></i></div>
+                        <p class="text-muted mb-4">"The seasonal gift boxes are actually high quality. It's the first
+                            membership where I feel I'm getting more than what I pay for."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-brand rounded-circle d-flex align-items-center justify-content-center text-white fw-bold"
+                                style="width: 48px; height: 48px;">LL</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Luna Lopez</h6>
+                                <small class="text-muted">Gold Member</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ Section (NEW) ================= -->
+    <section class="section-padding bg-main-theme">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h6 class="text-uppercase text-primary-brand fw-bold mb-2">Everything you need to know</h6>
+                        <h2 class="fw-bold display-6">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="accordion accordion-flush bg-transparent border-0" id="accordionFAQ">
+                        <div class="accordion-item bg-transparent border-bottom mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold text-main py-4"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="false">
+                                    How do I receive my physical perks?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted pb-4">
+                                    Physical perks like seasonal gift boxes and signed merchandise are shipped to the
+                                    address provided in your member profile. We ship globally every quarter!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-bottom mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold text-main py-4"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false">
+                                    Can I change my membership tier at any time?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted pb-4">
+                                    Yes! You can upgrade or downgrade your tier at any time from your dashboard
+                                    settings. If you upgrade, the change happens immediately.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-bottom mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold text-main py-4"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false">
+                                    What's included in 'Early Access'?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted pb-4">
+                                    Early access typically means you get to see our main YouTube vlogs and documentaries
+                                    48-72 hours before the general public, ad-free and in higher bitrate.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================= Social Proof ================= -->
     <section class="py-5 border-top border-bottom">
         <div class="container">
@@ -265,7 +463,7 @@
     </section>
 
     <!-- ================= CTA ================= -->
-    <section class="section-padding position-relative overflow-hidden bg-white">
+    <section class="section-padding position-relative overflow-hidden bg-main-theme">
         <div class="container position-relative z-index-1">
             <div class="bg-primary-brand rounded-5 p-5 text-center shadow-lg position-relative overflow-hidden">
                 <div class="dotted-pattern opacity-10"></div>
@@ -297,12 +495,12 @@
                         We build communities that empower fans to connect closer and experience more.
                     </p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-github"></i></a>
-                        <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle social-btn-circle"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle social-btn-circle"><i
+                                class="bi bi-github"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle social-btn-circle"><i
+                                class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -333,7 +531,7 @@
                     <h5 class="fw-bold">Stay Updated</h5>
                     <p class="text-muted small mb-3">Get the latest news and updates directly in your inbox.</p>
                     <form action="#">
-                        <div class="input-group bg-white p-1 rounded-pill border">
+                        <div class="input-group bg-card-theme p-1 rounded-pill border">
                             <input type="email" class="form-control border-0 bg-transparent ps-3"
                                 placeholder="Enter email" aria-label="Email">
                             <button class="btn btn-primary-custom rounded-pill" type="button">Subscribe</button>

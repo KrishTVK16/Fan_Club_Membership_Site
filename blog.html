@@ -53,19 +53,19 @@
                             <a class="nav-link" href="home-2.html">Home 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="blog.html">News</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="services.html">Perks</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Plans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Info
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 bg-card-theme rounded-4">
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="blog.html">News</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="about.html">About</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="pricing.html">Plans</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="contact.html">Contact</a></li>
+                            </ul>
                         </li>
                     </ul>
 
@@ -82,7 +82,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="section-padding bg-light position-relative overflow-hidden">
+    <header class="hero-section bg-section-alt position-relative overflow-hidden">
         <div class="hero-bg-blob" style="right: -400px; bottom: -200px; opacity: 0.3;"></div>
         <div class="container position-relative z-index-1 text-center">
             <h1 class="display-4 fw-bold mb-3">Club <span class="text-gradient">News</span></h1>
@@ -92,15 +92,46 @@
     </header>
 
     <!-- Blog Grid -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-card-theme">
         <div class="container">
+            <!-- Search and Categories (Moved to Top) -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="card border-0 bg-section-alt p-4 rounded-4 shadow-sm h-100">
+                        <h5 class="fw-bold mb-3 text-primary-brand">Search News</h5>
+                        <div class="input-group bg-card-theme rounded-pill border overflow-hidden">
+                            <input type="text" class="form-control border-0 px-3" placeholder="Keyword...">
+                            <button class="btn btn-white border-0 text-muted"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 bg-section-alt p-4 rounded-4 shadow-sm h-100">
+                        <h5 class="fw-bold mb-3 text-primary-brand">Categories</h5>
+                        <ul class="list-unstyled mb-0 d-flex flex-wrap gap-2">
+                            <li><a href="#"
+                                    class="btn btn-outline-secondary btn-sm rounded-pill d-flex align-items-center gap-2">
+                                    Tour Updates <span class="badge bg-primary-brand rounded-pill">12</span></a>
+                            </li>
+                            <li><a href="#"
+                                    class="btn btn-outline-secondary btn-sm rounded-pill d-flex align-items-center gap-2">
+                                    Exclusive Content <span class="badge bg-primary-brand rounded-pill">8</span></a>
+                            </li>
+                            <li><a href="#"
+                                    class="btn btn-outline-secondary btn-sm rounded-pill d-flex align-items-center gap-2">
+                                    Member Spotlight <span class="badge bg-primary-brand rounded-pill">5</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="row g-5">
                 <!-- Main Content -->
                 <div class="col-lg-8">
                     <!-- Article 1 -->
                     <article class="card card-hover border-0 mb-5 overflow-hidden shadow-sm rounded-4">
-                        <img src="https://placehold.co/800x400/F6EBD8/C67B3F?text=World+Tour+2026" class="card-img-top"
-                            alt="Blog Image">
+                        <img src="assets/images/worldtour.jpg" class="card-img-top" alt="Blog Image">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-center gap-2 mb-3 small text-muted">
                                 <span class="fw-bold text-primary-brand">Announcements</span>
@@ -119,8 +150,7 @@
 
                     <!-- Article 2 -->
                     <article class="card card-hover border-0 mb-5 overflow-hidden shadow-sm rounded-4">
-                        <img src="https://placehold.co/800x400/E8D8C3/7A634E?text=Exclusive+Merch" class="card-img-top"
-                            alt="Blog Image">
+                        <img src="assets/images/worldtour2.webp" class="card-img-top" alt="Blog Image">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-center gap-2 mb-3 small text-muted">
                                 <span class="fw-bold text-primary-brand">Merch Drop</span>
@@ -157,54 +187,19 @@
                     </nav>
                 </div>
 
-                <!-- Sidebar -->
-                <aside class="col-lg-4">
-                    <div class="position-sticky" style="top: 100px;">
-                        <!-- Search -->
-                        <div class="card border-0 bg-light p-4 rounded-4 mb-4 shadow-sm">
-                            <h5 class="fw-bold mb-3 text-primary-brand">Search News</h5>
-                            <div class="input-group bg-white rounded-pill border overflow-hidden">
-                                <input type="text" class="form-control border-0 px-3" placeholder="Keyword...">
-                                <button class="btn btn-white border-0 text-muted"><i class="bi bi-search"></i></button>
-                            </div>
-                        </div>
+                <!-- Newsletter -->
 
-                        <!-- Categories -->
-                        <div class="card border-0 bg-light p-4 rounded-4 mb-4 shadow-sm">
-                            <h5 class="fw-bold mb-3 text-primary-brand">Categories</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-2"><a href="#"
-                                        class="text-decoration-none text-muted d-flex justify-content-between align-items-center">Tour
-                                        Updates
-                                        <span
-                                            class="badge bg-white text-muted rounded-pill shadow-sm border">12</span></a>
-                                </li>
-                                <li class="mb-2"><a href="#"
-                                        class="text-decoration-none text-muted d-flex justify-content-between align-items-center">Exclusive
-                                        Content
-                                        <span
-                                            class="badge bg-white text-muted rounded-pill shadow-sm border">8</span></a>
-                                </li>
-                                <li class="mb-2"><a href="#"
-                                        class="text-decoration-none text-muted d-flex justify-content-between align-items-center">Member
-                                        Spotlight
-                                        <span
-                                            class="badge bg-white text-muted rounded-pill shadow-sm border">5</span></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Newsletter -->
-                        <div class="card border-0 bg-primary-brand text-white p-4 rounded-4 shadow-lg text-center">
-                            <h4 class="fw-bold mb-3">Newsletter</h4>
-                            <p class="mb-4 text-white-50 small">Get the latest fan news delivered right to your email.
-                            </p>
-                            <input type="email" class="form-control mb-3 bg-white border-0" placeholder="Fan email">
-                            <button class="btn btn-light w-100 fw-bold text-primary-brand shadow-sm">Subscribe</button>
-                        </div>
-                    </div>
-                </aside>
+                <!-- Newsletter -->
+                <div class="card border-0 bg-primary-brand text-white p-4 rounded-4 shadow-lg text-center">
+                    <h4 class="fw-bold mb-3">Newsletter</h4>
+                    <p class="mb-4 text-white-50 small">Get the latest fan news delivered right to your email.
+                    </p>
+                    <input type="email" class="form-control mb-3 bg-card-theme border-0" placeholder="Fan email">
+                    <button class="btn btn-light w-100 fw-bold text-primary-brand shadow-sm">Subscribe</button>
+                </div>
             </div>
+            </aside>
+        </div>
         </div>
     </section>
 
@@ -256,7 +251,7 @@
                     <h5 class="fw-bold">Stay Updated</h5>
                     <p class="text-muted small mb-3">Get the latest news and updates directly in your inbox.</p>
                     <form action="#">
-                        <div class="input-group bg-white p-1 rounded-pill border">
+                        <div class="input-group bg-card-theme p-1 rounded-pill border">
                             <input type="email" class="form-control border-0 bg-transparent ps-3"
                                 placeholder="Enter email" aria-label="Email">
                             <button class="btn btn-primary-custom rounded-pill" type="button">Subscribe</button>

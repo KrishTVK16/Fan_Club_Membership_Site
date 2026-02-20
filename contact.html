@@ -53,19 +53,19 @@
                             <a class="nav-link" href="home-2.html">Home 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">News</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="services.html">Perks</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Plans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Info
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 bg-card-theme rounded-4">
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="blog.html">News</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="about.html">About</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="pricing.html">Plans</a></li>
+                                <li><a class="dropdown-item py-2 px-4 rounded-3" href="contact.html">Contact</a></li>
+                            </ul>
                         </li>
                     </ul>
 
@@ -82,7 +82,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="section-padding bg-light position-relative overflow-hidden">
+    <header class="hero-section bg-section-alt position-relative overflow-hidden">
         <div class="hero-bg-blob" style="left: -300px; bottom: -300px; opacity: 0.3;"></div>
         <div class="container position-relative z-index-1 text-center">
             <h1 class="display-4 fw-bold mb-3">Reach <span class="text-gradient">Out</span>.</h1>
@@ -92,14 +92,16 @@
     </header>
 
     <!-- Contact Form -->
-    <section class="section-padding bg-white">
+    <section class="pt-4 pb-5 bg-card-theme">
         <div class="container">
+            <div class="d-flex flex-column align-items-center text-center mb-5">
+                <h2 class="fw-bold display-5 mb-3">Get in <span class="text-gradient">Touch</span></h2>
+                <div class="bg-primary-brand" style="width: 60px; height: 4px; border-radius: 2px;"></div>
+            </div>
             <div class="row g-5">
                 <div class="col-lg-5">
-                    <div
-                        class="card border-0 bg-primary-brand text-white p-4 h-100 rounded-4 shadow-lg position-relative overflow-hidden">
-                        <div class="position-absolute top-0 end-0 bg-white opacity-10 rounded-circle"
-                            style="width: 200px; height: 200px; margin: -50px;"></div>
+                    <div class="card border-0 text-white p-4 h-100 rounded-4 shadow-lg position-relative overflow-hidden"
+                        style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/contactinfo.jpg') center/cover no-repeat;">
 
                         <h4 class="fw-bold mb-4 position-relative z-index-1">Contact Information</h4>
                         <div class="mb-4 position-relative z-index-1">
@@ -115,20 +117,24 @@
                             <p class="fs-5 mb-0">456 Fan Central, Suite 200<br>Los Angeles, CA 90001</p>
                         </div>
 
-                        <div class="mt-auto position-relative z-index-1">
-                            <div class="d-flex gap-3">
-                                <a href="#" class="btn btn-outline-light rounded-circle shadow-sm"
-                                    style="width: 40px; height: 40px; display: grid; place-items: center;"><i
-                                        class="bi bi-twitter"></i></a>
-                                <a href="#" class="btn btn-outline-light rounded-circle shadow-sm"
-                                    style="width: 40px; height: 40px; display: grid; place-items: center;"><i
-                                        class="bi bi-linkedin"></i></a>
+                        <div class="mt-auto position-relative z-index-1 pt-4">
+                            <div class="d-flex gap-3 justify-content-start">
+                                <a href="#" class="btn rounded-circle shadow-sm social-btn-circle"
+                                    style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.3); color: #fff;"><i
+                                        class="bi bi-twitter fs-5"></i></a>
+                                <a href="#" class="btn rounded-circle shadow-sm social-btn-circle"
+                                    style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.3); color: #fff;"><i
+                                        class="bi bi-linkedin fs-5"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-7">
+                    <div class="mb-4 pt-4 text-center">
+                        <h4 class="fw-bold mb-2">Send us a Message</h4>
+                        <p class="text-muted small">Fill out the form below and we'll get back to you shortly.</p>
+                    </div>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -166,11 +172,19 @@
         </div>
     </section>
 
-    <!-- Map (Placeholder) -->
-    <div class="bg-light" style="height: 400px; display: grid; place-items: center; color: #aaa;">
-        <div class="text-center">
-            <i class="bi bi-geo-alt fs-1 mb-2"></i>
-            <p>Interactive Map Embed</p>
+    <!-- Map (Background Image) -->
+    <div class="bg-section-alt position-relative overflow-hidden"
+        style="height: 400px; background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('assets/images/worldtour.jpg') center/cover no-repeat; display: grid; place-items: center; color: #fff;">
+        <div class="text-center position-relative z-index-1 container">
+            <div class="bg-white text-primary-brand rounded-circle shadow-lg mb-4 mx-auto d-grid place-items-center"
+                style="width: 55px; height: 55px; border: 4px solid rgba(255, 255, 255, 0.3);">
+                <i class="bi bi-geo-alt-fill fs-3"></i>
+            </div>
+            <div class="pt-2">
+                <h3 class="fw-bold mb-2 display-6" style="text-shadow: 0 2px 15px rgba(0,0,0,0.8);">Visit Our
+                    Headquarters</h3>
+                <p class="lead mb-0 opacity-100 fw-medium">Los Angeles, California</p>
+            </div>
         </div>
     </div>
 
@@ -186,12 +200,12 @@
                         We build communities that empower fans to connect closer and experience more.
                     </p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-github"></i></a>
-                        <a href="#" class="btn btn-light rounded-circle p-0 d-grid place-items-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle social-btn-circle"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle social-btn-circle"><i
+                                class="bi bi-github"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle social-btn-circle"><i
+                                class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -222,7 +236,7 @@
                     <h5 class="fw-bold">Stay Updated</h5>
                     <p class="text-muted small mb-3">Get the latest news and updates directly in your inbox.</p>
                     <form action="#">
-                        <div class="input-group bg-white p-1 rounded-pill border">
+                        <div class="input-group bg-card-theme p-1 rounded-pill border">
                             <input type="email" class="form-control border-0 bg-transparent ps-3"
                                 placeholder="Enter email" aria-label="Email">
                             <button class="btn btn-primary-custom rounded-pill" type="button">Subscribe</button>
