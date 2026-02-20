@@ -1,0 +1,126 @@
+Good. I reviewed your HTML , CSS  and JS  carefully.
+
+Your hamburger is not “broken” — it is structurally correct — but the offcanvas layout is conflicting because you are forcing desktop flex behavior into mobile.
+
+We will fix ONLY mobile navigation. Nothing else.
+
+---
+
+# 🔴 PROBLEM
+
+Inside your HTML you have:
+
+```html
+<div class="offcanvas-body d-lg-flex align-items-center justify-content-between text-center">
+```
+
+The issue:
+
+* `align-items-center`
+* `justify-content-between`
+* `text-center`
+* custom flex rules in CSS
+
+These interfere with Bootstrap’s default vertical stacking for mobile.
+
+---
+
+# ✅ CLEAN PROFESSIONAL FIX (MOBILE ONLY)
+
+## ✅ STEP 1 — Change This Line in HTML
+
+In 
+
+Replace:
+
+```html
+<div class="offcanvas-body d-lg-flex align-items-center justify-content-between text-center">
+```
+
+With:
+
+```html
+<div class="offcanvas-body">
+```
+
+That’s it. Remove all flex forcing from HTML.
+
+---
+
+## ✅ STEP 2 — Add THIS to style.css (Bottom of File)
+
+In  add:
+
+```css
+/* ===== Mobile Offcanvas Clean Fix ===== */
+@media (max-width: 991.98px) {
+
+    .offcanvas {
+        width: 85% !important;
+        max-width: 360px;
+    }
+
+    .offcanvas-body {
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+
+    .offcanvas-body .navbar-nav {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .offcanvas-body .nav-link {
+        padding: 0.75rem 0;
+        font-size: 1rem;
+    }
+
+    .offcanvas-body .d-flex {
+        width: 100%;
+    }
+
+    .offcanvas-body .btn {
+        width: 100%;
+    }
+
+    .offcanvas-body .vr-separator {
+        display: none;
+    }
+}
+```
+
+---
+
+# ✅ WHY THIS WORKS
+
+✔ Removes conflicting flex rules
+✔ Keeps Bootstrap’s natural mobile stacking
+✔ Buttons become full width (clean app-style UI)
+✔ Menu links spaced properly
+✔ Offcanvas width controlled
+✔ No change to desktop behavior
+
+---
+
+# 🔥 IMPORTANT
+
+Do NOT:
+
+* Add flex globally to `.offcanvas-body`
+* Force `justify-content-between` on mobile
+* Add `text-center` in HTML for offcanvas
+
+Let Bootstrap handle structure. Use CSS only inside media queries.
+
+---
+
+After this fix your mobile nav will:
+
+* Slide cleanly
+* Stack perfectly
+* Align buttons properly
+* Look like a professional SaaS product
+
+---
+
+If it still annoys you, I can give you a **minimal premium offcanvas redesign** that feels like Stripe / Linear quality.
