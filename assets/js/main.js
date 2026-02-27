@@ -106,18 +106,4 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(dropdownStyle);
 
-    // Bootstrap fallback/enhancement for hover
-    const customDropdowns = document.querySelectorAll('.navbar .nav-item.dropdown');
-    customDropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-
-        // Prevent click navigation if just hovering, but allow click on mobile
-        toggle.addEventListener('click', (e) => {
-            if (window.innerWidth >= 992) {
-                // If it's a real link, we might want to follow it, 
-                // but usually dropdown-toggles are # or click-triggers.
-                // Keeping default for now.
-            }
-        });
-    });
 });

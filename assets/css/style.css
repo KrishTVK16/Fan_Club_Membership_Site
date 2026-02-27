@@ -111,7 +111,8 @@ a {
    3. Utility Classes
    ========================================= */
 .text-primary-brand {
-    color: var(--primary-color) !important;
+    color: #b36b33 !important;
+    /* Slightly darker for better accessibility on light backgrounds */
 }
 
 .bg-primary-brand {
@@ -121,6 +122,22 @@ a {
 
 .text-secondary-brand {
     color: var(--accent-color) !important;
+}
+
+.text-theme {
+    color: var(--text-main) !important;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #3D2D1E;
+    border: 1px solid #E8D8C3;
+}
+
+[data-bs-theme="dark"] .btn-white {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border-color: var(--border-color);
 }
 
 /* Responsive Backgrounds */
@@ -169,11 +186,14 @@ a {
 }
 
 /* Glassmorphism Card */
-.card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid var(--border-color);
+.card {
+    border: 1px solid var(--border-color) !important;
     background-color: var(--card-bg);
     border-radius: var(--border-radius-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover {
     box-shadow: var(--shadow-sm);
 }
 
@@ -312,6 +332,57 @@ a {
     background: radial-gradient(circle, rgba(198, 123, 63, 0.2) 0%, rgba(61, 45, 30, 0) 70%);
 }
 
+
+.hero-section p {
+    font-weight: 600 !important;
+}
+
+/* Universal Hover Dropdowns */
+.navbar .nav-item.dropdown:hover>.dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.navbar .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.navbar .nav-item.dropdown:hover>.dropdown-menu {
+    pointer-events: auto;
+}
+
+/* Specific adjustments for Mobile/Offcanvas Dropdowns */
+@media (max-width: 991.98px) {
+    .offcanvas .navbar-nav .dropdown-menu {
+        position: relative !important;
+        transform: none !important;
+        box-shadow: none !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+        opacity: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .offcanvas .navbar-nav .nav-item.dropdown:hover>.dropdown-menu {
+        max-height: 500px;
+        opacity: 1 !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+}
 
 .hero-title {
     font-size: 3.75rem;
@@ -617,7 +688,8 @@ a {
 }
 
 .gallery-item .bg-gradient {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Comparison Table Styling */
